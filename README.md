@@ -6,7 +6,7 @@ IA-32(x86) CPU アーキテクチャ向けの Node.js ASUSTOR アプリケーシ
 
 ### Download Node.js
 
-[Node.js Unofficial Builds Project](https://unofficial-builds.nodejs.org/) の [ダウンロードページ](https://unofficial-builds.nodejs.org/download/release/) から、linux-x86 ビルドの URL を取得し、ダウンロードします。対象バージョンは [index.tab](https://unofficial-builds.nodejs.org/download/release/index.tab) で確認できます。
+[Node.js Unofficial Builds Project](https://unofficial-builds.nodejs.org/) の [ダウンロードページ](https://unofficial-builds.nodejs.org/download/release/) から、linux-x86 ビルドの URL を取得し、ダウンロードします。対象バージョンは [index.tab](https://unofficial-builds.nodejs.org/download/release/index.tab) で確認できます。
 
 ```console
 curl -LO https://unofficial-builds.nodejs.org/download/release/v12.16.3/node-v12.16.3-linux-x86.tar.xz
