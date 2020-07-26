@@ -1,0 +1,21 @@
+{
+  "general": {
+    "package": "nodejs-i386",
+    "name": "Node.js i386",
+    "version": "12.16.3.r1",
+    "depends": [],
+    "conflicts": [],
+    "developer": "Joyent, Inc.",
+    "maintainer": "ɯ̹t͡ɕʲi",
+    "email": "u@chimata.org",
+    "website": "https://nodejs.org/",
+    "architecture": "i386",
+    "firmware": "3.1.0"
+  },
+  "register": {
+    "symbolic-link": {
+      "/bin": ["*"],
+      "/lib": ["libstdc++.so.6.0.25"]
+    }
+  }
+}

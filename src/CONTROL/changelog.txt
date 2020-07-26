@@ -1,0 +1,7 @@
+# Node.js for ASUSTOR NAS x86(IA-32) Changelog
+
+## [12.16.3.r1] - 2020-07-27
+Binary builds has been obtained from [Node.js Unofficial Builds Project](https://unofficial-builds.nodejs.org/)
+
+- [Node.js v12.6.13 Release](https://unofficial-builds.nodejs.org/download/release/v12.16.3/node-v12.16.3-linux-x86.tar.xz)
+- [Node.js v12.6.13 Changelog](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V12.md#12.16.3)
