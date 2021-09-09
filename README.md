@@ -30,7 +30,7 @@ docker pull i386/buildpack-deps
 docker run -it --rm -v $(PWD)/install:/install i386/buildpack-deps cp -a /usr/lib/i386-linux-gnu/libstdc++.so.6.0.25 /install
 ```
 
-####For amd64
+#### For amd64
 
 ```console
 docker pull amd64/buildpack-deps
