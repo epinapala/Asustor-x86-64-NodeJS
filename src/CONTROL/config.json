@@ -1,7 +1,7 @@
 {
   "general": {
-    "package": "nodejs_x86-64",
-    "name": "Node.js i386",
+    "package": "nodejs-x64",
+    "name": "Node.js 64 bit",
     "version": "14.17.6",
     "depends": [],
     "conflicts": [],
