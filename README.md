@@ -24,6 +24,7 @@ mv node-v14.17.6-linux-x64-usdt/* ./src/
 ### Copy `libstdc++.so.6`
 
 Pull the image of `amd64/buildpack-deps` to get the `libstdc ++. So.6` shared library file from the container. At this time, mount `./install` on the host side to` / install` on the container to extract the files onto the host machine. Note that we are doing all this on the NAS itself.
+Note: If you get permission denied error, run docker commands as sudo!
 
 ```console
 docker pull amd64/buildpack-deps
