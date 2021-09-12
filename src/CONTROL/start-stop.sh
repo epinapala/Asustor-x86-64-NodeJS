@@ -6,7 +6,7 @@ case $1 in
 		# start script here
 		echo "Starting nodejs-i386..."
 		# [ ! -f /usr/bin/node ] && ln -s /usr/local/bin/node /usr/bin/node
-		ln -sf /usr/local/lib/libstdc++.so.6.0.25 /lib/libstdc++.so.6
+		ln -sf /usr/local/lib64/libstdc++.so.6.0.28 /lib/libstdc++.so.6
 		;;
 
 	stop)

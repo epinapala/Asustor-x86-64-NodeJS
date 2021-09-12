@@ -1,21 +1,21 @@
 {
   "general": {
-    "package": "nodejs-i386",
+    "package": "nodejs_x86-64",
     "name": "Node.js i386",
-    "version": "12.16.3.r1",
+    "version": "14.17.6",
     "depends": [],
     "conflicts": [],
     "developer": "Joyent, Inc.",
-    "maintainer": "ɯ̹t͡ɕʲi",
-    "email": "u@chimata.org",
-    "website": "https://nodejs.org/",
-    "architecture": "i386",
-    "firmware": "3.1.0"
+    "maintainer": "Rajesh Pinapala",
+    "email": "rajesh@pinapala.com",
+    "website": "https://github.com/epinapala/Asustor-x86-64-NodeJS",
+    "architecture": "x86-64",
+    "firmware": "3.5.7"
   },
   "register": {
     "symbolic-link": {
       "/bin": ["*"],
-      "/lib": ["libstdc++.so.6.0.25"]
+      "/lib64": ["libstdc++.so.6.0.28"]
     }
   }
 }

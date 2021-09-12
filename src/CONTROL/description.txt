@@ -1,3 +1,3 @@
 Node.js is an open-source, cross-platform, JavaScript runtime environment. It executes JavaScript code outside of a browser. 
-
+This package ensures compatible NodeJS 14.17.6 for Asustor NAS 64 Bit nachines. More information and source at [github repo](https://github.com/epinapala/Asustor-x86-64-NodeJS)
 For more information on using Node.js, see the [Node.js Website](https://nodejs.org/).

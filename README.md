@@ -1,62 +1,55 @@
-# Node.js for ASUSTOR NAS i386
+# Node.js for ASUSTOR NAS x64
 
-IA-32(x86) CPU アーキテクチャ向けの Node.js ASUSTOR アプリケーションパッケージファイル。
+Node.js ASUSTOR application package file for 64bit CPU architecture.
 
 ## How to use
 
 ### Download Node.js
 
-[Node.js Unofficial Builds Project](https://unofficial-builds.nodejs.org/) の [ダウンロードページ](https://unofficial-builds.nodejs.org/download/release/) から、linux-x86 ビルドの URL を取得し、ダウンロードします。対象バージョンは [index.tab](https://unofficial-builds.nodejs.org/download/release/index.tab) で確認できます。
+Get the linux-x64 build from the [Node.js Unofficial Builds Project](https://unofficial-builds.nodejs.org/). Navigate to [download page](https://unofficial-builds.nodejs.org/download/release/) and download the version of your choice. You can check the target version in [index.tab](https://unofficial-builds.nodejs.org/download/release/index.tab)
 
 ```console
-curl -LO https://unofficial-builds.nodejs.org/download/release/v12.16.3/node-v12.16.3-linux-x86.tar.xz
+curl -LO https://unofficial-builds.nodejs.org/download/release/v14.17.6/node-v14.17.6-linux-x64-usdt.tar.gz
 ```
 
 ### Unarchive Node.js
 
-ダウンロードしたアーカイブを展開し、`./src/`配下に移動します。
+Extract the downloaded archive and move it under `./src/`.
 
 ```console
-tar -Jxvf node-v12.16.3-linux-x86.tar.xz
-mv node-v12.16.3-linux-x86/* ./src/
+tar -xvf node-v14.17.6-linux-x64-usdt.tar.gz
+mv node-v14.17.6-linux-x64-usdt/* ./src/
 ```
 
 ### Copy `libstdc++.so.6`
 
-`i386/buildpack-deps`のイメージを pull してコンテナの`libstdc++.so.6`ファイルを取り出します。このとき、ホスト側の`./install`をコンテナの`/install`にマウントします。
-
-```console
-docker pull i386/buildpack-deps
-docker run -it --rm -v $(PWD)/install:/install i386/buildpack-deps cp -a /usr/lib/i386-linux-gnu/libstdc++.so.6.0.25 /install
-```
-
-#### For amd64
+Pull the image of `amd64/buildpack-deps` to get the `libstdc ++. So.6` shared library file from the container. At this time, mount `./install` on the host side to` / install` on the container to extract the files onto the host machine. Note that we are doing all this on the NAS itself.
 
 ```console
 docker pull amd64/buildpack-deps
-docker run -it --rm -v $(PWD)/install:/install amd64/buildpack-deps cp -a /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25 /install
+docker run -it --rm -v ${PWD}/install:/install amd64/buildpack-deps cp -a /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28 /install
 ```
 
 
-取り出したファイルは `./src/lib/` 配下に移動します。
+The extracted file will be moved under `./src/lib64/`.
 
 ```console
-mv install/* ./src/CONTROL/lib/
+mv install/* ./src/CONTROL/lib64/
 ```
 
-### Build .apk
+### Build the .apk
 
-以下のコマンドでパッケージファイルを作成します。
+Create a package file from the `./src/` directory with the following command.
 
 ```console
-python2 ./APKG_Utilities_2.0/apkg-tools.py create ./src
+python ./APKG_Utilities_2.0/apkg-tools.py create ./src
 ```
 
 ### Install .apk
 
-ASUSTOR NAS の管理画面にログインし、App Central を開きます。
+Log in to the ASUSTOR NAS administration screen and open App Central.
 
-管理の手動インストールタブからパッケージをインストールします。
+Install the package from the Manual Install tab under Management.
 
 ## References
 
@@ -64,6 +57,9 @@ ASUSTOR NAS の管理画面にログインし、App Central を開きます。
   - App Central Developer Guide
   - App Build Tools
   - Sample Custom apk
+
+## Credits
+- [Node.js for ASUSTOR NAS i386 by c18t](https://github.com/c18t/asustor-nas-app-nodejs-i386)
 
 ## License
 
